@@ -34,6 +34,10 @@ jobs:
       with:
         arguments: build
         
+   # 빌드 에러 발생으로 추가.
+    - name: Run chmod to make gradlew executable
+      run: chmod +x ./gradlew
+        
     # build한 후 프로젝트를 압축.
     - name: Make zip file
       run: zip -r ./practice-deploy.zip .
